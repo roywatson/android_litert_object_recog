@@ -1,0 +1,34 @@
+{
+  "qairt_version": "2.50.0.260828",
+  "source_url": "https://softwarecenter.qualcomm.com/api/download/software/sdks/Qualcomm_AI_Runtime_Community/All/2.50.0.260828/v2.50.0.260828.zip",
+  "files": {
+    "libQnnSystem.so": {
+      "bytes": 4068024,
+      "sha256": "b30bd9880dc48f6c5349185a7d45b326f8a064b10072e60094354fa23d9a2027"
+    },
+    "libQnnHtp.so": {
+      "bytes": 3978976,
+      "sha256": "09e930b6af975bae23bcf6965ac2ce60f6b999aff37cb7eabe9b4d7c1bc3f264"
+    },
+    "libQnnHtpPrepare.so": {
+      "bytes": 85026120,
+      "sha256": "fb2580518a1072b2d32324727c187b8c8fc77a385ded839666eb5bc66cd0ad94"
+    },
+    "libQnnHtpV69Stub.so": {
+      "bytes": 783992,
+      "sha256": "b7063e6824cf46f9c06357a45ab8b33a12de7b08e61104f0ee4d1fb3ab8d46d6"
+    },
+    "libQnnHtpV79Stub.so": {
+      "bytes": 791424,
+      "sha256": "42c2e49965c66e4924fe509ba9547c4d04ad9e618c950dd8b1eaa84fab0d0ca9"
+    },
+    "libQnnHtpV69Skel.so": {
+      "bytes": 12383460,
+      "sha256": "93c395d8fe86021708bb8ee8ed6926416794f6167e7a236e7d75d490ceb99e55"
+    },
+    "libQnnHtpV79Skel.so": {
+      "bytes": 12559528,
+      "sha256": "238675526b2932efe83a66784937e310ce238e76577e16e9c4358e81711e5333"
+    }
+  }
+}

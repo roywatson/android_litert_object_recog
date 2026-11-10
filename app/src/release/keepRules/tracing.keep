@@ -1,0 +1,22 @@
+# The release instrumentation runner calls this shared API by its original name.
+# Keep this small tracing entry point available in the optimized target APK.
+-keep class androidx.tracing.Trace { *; }
+
+# The separately optimized instrumentation APK shares the target's Kotlin
+# standard library. Preserve its external API: otherwise R8 removes/inlines
+# facade classes and methods still referenced by the runner and test code.
+# Keep application, AndroidX and kotlinx optimization enabled.
+-keep,allowoptimization,includedescriptorclasses class kotlin.** { public protected *; }
+
+# Public entry points exercised from the separately compiled test APK. Preserve
+# their callable signatures while allowing R8 to optimize method bodies.
+-keep,allowoptimization,includedescriptorclasses class com.roywatson.android_litert_object_recog.vision.FramePreprocessor { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.roywatson.android_litert_object_recog.vision.VisionSession { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.roywatson.android_litert_object_recog.vision.VisionSession$* { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.roywatson.android_litert_object_recog.vision.VisionState { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.roywatson.android_litert_object_recog.vision.Backend { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.roywatson.android_litert_object_recog.vision.QualcommNpu { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.roywatson.android_litert_object_recog.vision.KotlinEngine { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.roywatson.android_litert_object_recog.vision.NativeNpuEngine { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.google.ai.edge.litert.CompiledModel { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.google.ai.edge.litert.CompiledModel$* { public *; }

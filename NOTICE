@@ -1,0 +1,20 @@
+Vision Lab
+Copyright 2026 Roy Watson
+
+Includes an unmodified EfficientNet-Lite0 float32 model from Google's MediaPipe
+model collection. Embedded author: MediaPipe. Embedded license: Apache License,
+Version 2.0. Labels are extracted unchanged from that model's associated file.
+Model provenance, checksum and tensor contract: docs/MODEL.md.
+
+LiteRT and CameraX are Google/Android open-source dependencies distributed under
+their respective Apache 2.0 licenses. Jetpack Compose and Kotlin retain their
+respective upstream copyrights and notices. Their packaged notices remain in
+the resolved dependencies.
+
+The optional Qualcomm NPU build uses local Qualcomm AI Runtime (QAIRT) vendor
+binaries under their separate vendor terms. Those binaries are excluded from
+source control. Original vendor license/notice files and a runtime provenance
+asset are included in that APK. They are not relicensed by this project.
+
+The version-pinned LiteRT C API headers under third_party/litert-2.3.0 retain
+upstream Google copyrights and their Apache 2.0 license.
